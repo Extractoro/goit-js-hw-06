@@ -18,15 +18,16 @@ function onFormSubmit(event) {
     const inputEmail = formElems.email.value
     const inputPassword = formElems.password.value
 
-    if (inputEmail === '' || inputPassword === '') {
-        alert('Все поля должны быть заполнены')
-    }
-
     const allData = {
         email: inputEmail,
         password: inputPassword
     }
-    console.log(allData);
+
+    if (inputEmail === '' || inputPassword === '') {
+        alert('Все поля должны быть заполнены')
+    } else {
+        console.log(allData);
+    }
 
     if (allData) {
         form.reset()

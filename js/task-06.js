@@ -14,14 +14,12 @@ const inputEl = document.querySelector('#validation-input')
 
 
 inputEl.addEventListener("blur", () => {
-    // if (inputEl.value.length < inputEl.dataset.length) {
-    //     onInvalid()
-    // }
-
-    // if (inputEl.value.length >= inputEl.dataset.length) {
-    //     onValid()
-    // }
-    inputEl.value.length >= inputEl.dataset.length ? onValid() : onInvalid()
+    if (inputEl.value.length < inputEl.dataset.length || inputEl.value.length > inputEl.dataset.length) {
+        onInvalid()
+    } else {
+        onValid()
+    }
+    // inputEl.value.length === inputEl.dataset.length ? onValid() : onInvalid()
 });
 
 function onInvalid() {

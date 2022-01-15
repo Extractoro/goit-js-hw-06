@@ -6,12 +6,10 @@ const widget = document.querySelector('.widget')
 const color = document.querySelector('.color')
 const btn = document.querySelector('.change-color')
 
-widget.style.backgroundColor = getRandomHexColor
-
 btn.addEventListener('click', onBgColor)
 
-function onBgColor(event) {
-    // console.log(getRandomHexColor());
-    widget.style.backgroundColor = getRandomHexColor()
-    color.textContent = getRandomHexColor()
+function onBgColor() {
+    const randColor = getRandomHexColor()
+    widget.style.backgroundColor = randColor
+    color.textContent = randColor
 }
