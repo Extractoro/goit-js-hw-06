@@ -26,11 +26,8 @@ function onFormSubmit(event) {
     if (inputEmail === '' || inputPassword === '') {
         alert('Все поля должны быть заполнены')
     } else {
-        console.log(allData);
-    }
-
-    if (allData) {
         form.reset()
+        console.log(allData);
     }
 
     //     const formData = new FormData(event.currentTarget)
